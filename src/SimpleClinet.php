@@ -28,6 +28,12 @@ class SimpleClinet
         ]);
     }
 
+    public function setDbname(string $dbname): self
+    {
+        $this->dbname = $dbname;
+        return $this;
+    }
+
     public function createDatabase(string $dbname = ''): void
     {
         if ($dbname === '') {
