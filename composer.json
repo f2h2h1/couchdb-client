@@ -1,0 +1,27 @@
+{
+    "name": "f2h2h1/couchdb-client",
+    "description": "a simple couchdb client base on php",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "f2h2h1",
+            "email": "mP6iB1hB@outlook.com"
+        }
+    ],
+    "require": {
+        "symfony/http-client": "5.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9"
+    },
+    "autoload": {
+        "psr-4": {
+            "F2h2h1\\CouchDB\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "F2h2h1\\Tests\\CouchDB\\": "tests/"
+        }
+    }
+}
