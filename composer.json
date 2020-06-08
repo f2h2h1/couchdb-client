@@ -1,7 +1,7 @@
 {
     "name": "f2h2h1/couchdb-client",
     "description": "a simple couchdb client base on php",
-    "license": "mit",
+    "license": "MPL2.0",
     "authors": [
         {
             "name": "f2h2h1",
