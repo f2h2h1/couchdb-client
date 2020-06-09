@@ -2,29 +2,19 @@
 Simple CouchDB Clinet
 ==============================
 
-## 安装
+## 快速开始
 
 安装 couchdb
 ```shell
 docker run -p 5984:5984 -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password --name couchdb -d couchdb:3.1
 ```
 
-克隆仓库
+声明依赖
 ```shell
-git clone https://github.com/f2h2h1/orm.git
+composer require f2h2h1/couchdb-client
 ```
 
-运行 composer
-```shell
-composer install
-```
-
-运行测试用例
-```shell
-composer exec -v phpunit tests/CouchDBClientTest.php
-```
-
-## 使用例子
+使用例子
 ```php
 use F2h2h1\CouchDB\SimpleClinet;
 
@@ -65,4 +55,21 @@ $client->deleteDatabase();
 echo 'delete database success' . PHP_EOL;
 ```
 
-[![License: MPL2.0](https://img.shields.io/badge/license-MPL2.0-orange)](https://www.mozilla.org/en-US/MPL/2.0/)
+## 开发
+
+克隆仓库
+```shell
+git clone https://github.com/f2h2h1/orm.git
+```
+
+运行 composer
+```shell
+composer install
+```
+
+运行测试用例
+```shell
+composer exec -v phpunit tests/CouchDBClientTest.php
+```
+
+[![License: MPL-2.0](https://img.shields.io/badge/license-MPL--2.0-green)](https://www.mozilla.org/en-US/MPL/2.0/)
