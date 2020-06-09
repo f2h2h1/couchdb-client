@@ -75,6 +75,19 @@ class CouchDBClientTest extends TestCase
         $this->assertEquals($id, $id2);
         $this->assertNotEquals($rev, $rev2);
         $this->assertEquals($docs['age'], 24);
+
+        return [$id2, $rev2];
+    }
+
+    /**
+     * @depends testPutDocument
+     */
+    public function testDdeleteDocument($param)
+    {
+        $id = $param[0];
+        $rev = $param[1];
+        self::$simpleClinet->deleteDocument($id, $rev);
+        $this->assertNull(self::$simpleClinet->findDocument($id));
     }
 
     public function testOtehrDataBase()
