@@ -109,9 +109,19 @@ class SimpleClinet
         return [$body['id'], $body['rev']];
     }
 
-    public function findDocument(string $id): array
+    public function findDocument(string $id): ?array
     {
         $response = $this->httpClient->request('GET', '/' . $this->dbname . '/' . urlencode($id));
+        $status = $response->getStatusCode();
+
+        if ($status == 404) {
+            return null;
+        }
+
+        if ($status != 200) {
+            // 抛异常
+        }
+
         return $response->toArray();
     }
 
